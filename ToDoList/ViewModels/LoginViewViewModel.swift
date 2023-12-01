@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+class LoginViewViewModel : ObservableObject {
+    @Published var email = ""
+    @Published var passward = ""
+    
+    init(email: String = "", passward: String = "") {
+        self.email = email
+        self.passward = passward
+    }
+}

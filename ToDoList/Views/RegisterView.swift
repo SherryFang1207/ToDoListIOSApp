@@ -24,6 +24,8 @@ struct RegisterView: View {
                     .autocapitalization(.none)
                 TextField("Password", text: $viewModel.password)
                     .textFieldStyle(DefaultTextFieldStyle())
+                    .autocorrectionDisabled()
+                    .autocapitalization(.none)
                 
                 TLButton(title: "Create Account", background: .green) {
                     // Register action

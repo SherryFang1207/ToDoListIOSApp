@@ -9,10 +9,14 @@ import SwiftUI
 //Refresh Canvas: cmd opt P
 // Switch light/dark mode: cmd shift A
 struct MainView: View {
+    @StateObject var viewModel = MainViewViewModel()
     var body: some View {
-        
+        if viewModel.isSignedIn, !viewModel.currentUserId.isEmpty{
+            // Signed In
+            ToDoListView()
+        }else{
             LoginView()
-        
+        }
     }
 }
 

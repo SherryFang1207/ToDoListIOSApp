@@ -10,6 +10,8 @@ import FirebaseAuth
 
 class MainViewViewModel : ObservableObject {
     @Published var currentUserId : String = ""
+    
+    
     private var handler : AuthStateDidChangeListenerHandle?
     init() {
         self.handler = Auth.auth().addStateDidChangeListener({ [weak self] _, user in

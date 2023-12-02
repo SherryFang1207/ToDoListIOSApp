@@ -6,16 +6,35 @@
 //
 
 import SwiftUI
-
+import FirebaseFirestore
+import FirebaseFirestoreSwift
 struct ToDoListView: View {
     @StateObject var viewModel = ToDoListViewViewModel()
+    @FirestoreQuery var items : [ToDoListItem]
+    
     var userId : String
     init(userId : String){
         self.userId = userId
+        self._items = FirestoreQuery(collectionPath: "users/\(userId)/todos")
+        
     }
     var body: some View {
         NavigationView {
             VStack {
+                //MARK: - Add Swipe Animation using cocoapods
+                List(items){
+                    item in ToDoListItemView(item: item)
+                        .swipeActions{
+                            Button(action: {
+                                // delete cur Todo
+                                viewModel.delete(id: item.id)
+                            }, label: {
+                                Text("Delete")
+                                    .foregroundColor(Color.red)
+                            })
+                        }
+                }
+                .listStyle(PlainListStyle())
                 
             }.navigationTitle("To Do List")
                 .toolbar {
@@ -32,5 +51,5 @@ struct ToDoListView: View {
 }
 
 #Preview {
-    ToDoListView(userId: "")
+    ToDoListView(userId: "TG6QduGDJBXN2GniD3PkW9L1ibf1")
 }

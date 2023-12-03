@@ -1,5 +1,7 @@
 # ToDoListIOSApp
 ToDoList App is a comprehensive iPhone application built using Swift, SwiftUI, Firebase, and Xcode. It's designed to help users manage their tasks efficiently with cloud-based data storage for enhanced reliability and accessibility.
+<br>
+<img src="Design%20Files/ToDoListApp%20V1%20Mockup/ToDoListAppIcon.png" width="300" height="300">
 
 ## Features
 

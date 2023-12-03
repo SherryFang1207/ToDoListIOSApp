@@ -17,5 +17,10 @@ As part of our ongoing effort to improve the ToDoList App, we are considering th
 3. **Search Functionality:** Introduce a search feature to allow users to find specific tasks by keywords and filter their ToDo list more efficiently.
 
 ---
+## App Mockup
+
+<img src="Design%20Files/ToDoListApp%20V1%20Mockup/LogInPage.png" width="342" height="684"> <img src="Design%20Files/ToDoListApp%20V1%20Mockup/RegisterPage.png" width="342" height="684"><img src="Design%20Files/ToDoListApp%20V1%20Mockup/UserProfile.png" width="342" height="684">
+<img src="Design%20Files/ToDoListApp%20V1%20Mockup/ToDoList%28delete%29.png" width="342" height="684"> <img src="Design%20Files/ToDoListApp%20V1%20Mockup/NewToDoPage.png" width="342" height="684">
+
 
 *Note: The current version of the app serves as a minimum viable product. The above-mentioned enhancements are part of our roadmap to make the ToDoList App more robust and user-friendly.*
